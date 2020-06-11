@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 import java.util.Stack;
 
 public class PushAndPop {
@@ -24,6 +25,21 @@ public class PushAndPop {
         printStack(stack);
         stack.pop();
         printStack(stack);
+
+        // Queue method in Collection...
+        PriorityQueue<String> priorityQueue = new PriorityQueue<>();
+        priorityQueue.offer("Bottom");
+        priorityQueue.offer("Second");
+        priorityQueue.offer("Third");
+
+        System.out.printf(" %s ", priorityQueue);
+
+        // return highest priority elements from list...
+        System.out.printf(" %s ", priorityQueue.peek());
+
+        // Remove highest priority elements from list...
+         priorityQueue.poll();
+        System.out.printf(" %s ", priorityQueue);
     }
 
     private static void printStack(Stack<String> A) {
@@ -33,4 +49,7 @@ public class PushAndPop {
             System.out.printf(" %s TOP\n", A);
         }
     }
+
+
+
 }
